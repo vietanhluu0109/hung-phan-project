@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Events</title>
+    <link href="events.css" rel="stylesheet">
+</head>
+<body onload="loaded()">
+    <div id = "root">
+        <div></div>
+        <h1 class = "question">What is the √carrot?</h1>
+        <div>
+            <div class="layout">
+                <button class="Ansbox" onclick="ANS('A')" index = 0>Shallots</button>
+                <button class="Ansbox" onclick="ANS('B')"index = 1>Onion</button>
+            </div>
+            <div class="layout">
+                <button class="Ansbox" onclick="ANS('C')" index = 2>What????</button>
+                <button class="Ansbox" onclick="ANS('D')" index = 3>Pi (π)</button>
+            </div>
+        </div>
+        <div></div>
+    </div>
+    <div id = "footer">
+        <p id = "lives">Lives: </p>
+        <p id = "skips">Skip</p>
+    </div>
+    
+      
+    
+        
+    
+    
+    <script src="events.js"></script>
+</body>
+</html>
