@@ -1,0 +1,12 @@
+body{
+    margin: 0px;
+}
+#bg_demo{
+    width: 100%;
+    height: 650px;
+    background-image: url(start.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+
+}
