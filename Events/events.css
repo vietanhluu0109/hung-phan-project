@@ -2,15 +2,40 @@ html,body,#root {
     height: 100%;
 }
 
-body {
-    /* background-image: url(https://i.pinimg.com/originals/8c/5b/9f/8c5b9ffdb179b37fe20b2c5c5201d9f0.jpg) */
+#menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.question {
+#start {
+    font-size: 30px;
+    width: 500px;
+    height: 300px;
+    transition-duration: 0.3s;
+    background-color: white;
+}
+
+#start:hover{
+    background-color: #4CAF50;
+    color: white;
+    cursor: not-allowed;
+}
+
+#questionnumber {
+    font-size: 30px;
+    color: red;   
+    /* display: flex; */
+    text-align: left;
+    display: inline-block;
+}
+
+#question {
     text-transform: uppercase;
     color: orange;
     font-family: "Segoe Script";
-    
+    display: flex;
+    text-align: center;
 }
 
 
@@ -20,6 +45,7 @@ body {
     flex-flow: column;
     align-items: center;
     justify-content: space-between;
+    margin: 10px;
 }
 
 
@@ -29,15 +55,15 @@ body {
     color: red;   
     font-size: 30px;
     font-family: "Comic Sans MS", cursive, sans-serif;
-    border: 3px black,solid;    
+    border: 1.5px solid #4CAF50;    
     cursor: not-allowed;
+    background-color: lightgray;
 }
 
 .layout {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-
 }
 
 #lives {
@@ -45,21 +71,19 @@ body {
     color: red;   
     /* display: flex; */
     text-align: left;
+    display: inline-block;
     /* justify-content: flex-start; */
 }
 
 #skips {
     font-size: 30px;
     color: red;   
-    /* display: flex; */
+    display: inline-block;
+    float: right;
+    cursor: pointer;
+    /*
     text-align: right;
     /* justify-content: flex-end; */
 }
 
 
-
-#footer {
-    /* display: inline-block;  */
-    /* border: 1px solid red;  */
-    /* margin:10px; */
-}

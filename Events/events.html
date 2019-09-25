@@ -1,38 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Events</title>
     <link href="events.css" rel="stylesheet">
+    <!-- <link href="vietanh.css" rel="stylesheet"> -->
 </head>
-<body onload="loaded()">
-    <div id = "root">
-        <div></div>
-        <h1 class = "question">What is the √carrot?</h1>
-        <div>
-            <div class="layout">
-                <button class="Ansbox" onclick="ANS('A')" index = 0>Shallots</button>
-                <button class="Ansbox" onclick="ANS('B')"index = 1>Onion</button>
-            </div>
-            <div class="layout">
-                <button class="Ansbox" onclick="ANS('C')" index = 2>What????</button>
-                <button class="Ansbox" onclick="ANS('D')" index = 3>Pi (π)</button>
+
+<body>
+    <div id = "menu">
+        <button id = "start" onclick="start()" >START QUIZ!</button>
+        <!-- <button id = "credit">CREDIT</button> -->
+    </div>
+
+    <div id = "quiz" style="display : none;">
+        <div id="questionnumber"></div>
+        <div id="root">
+            <h1 id="question"></h1>
+            <div>
+                <div class="layout">
+                    <button class="Ansbox" id="A" onclick="Anscheck(this.id)" index=a onmouseout="colorbefore(this.id)" onmouseover="colorafter('A')"></button>
+                    <button class="Ansbox" id="B" onclick="Anscheck(this.id)" index=b onmouseout="colorbefore(this.id)" onmouseover="colorafter('B')"></button>
+                </div>
+                <div class="layout">
+                    <button class="Ansbox" id="C" onclick="Anscheck(this.id)" index=c onmouseout="colorbefore(this.id)" onmouseover="colorafter('C')"></button>
+                    <button class="Ansbox" id="D" onclick="Anscheck(this.id)" index=d onmouseout="colorbefore(this.id)" onmouseover="colorafter('D')"></button>
+                </div>
             </div>
         </div>
-        <div></div>
+        <div id="footer" style="display : none;">
+            <p id="lives">LIVES: 0</p>
+            <p onclick=skipquest() id="skips">SKIP: 3</p>
+        </div>
+        <audio id = "rightsound">
+            <source src="rightAnsSound.mp3" type="audio/mpeg">
+        </audio>
+        <audio id = "wrongsound">
+            <source src="wrongAnsSound.mp3" type="audio/mpeg">
+        </audio>
+        <audio id = "oversound">
+            <source src="GameOver.mp3" type="audio/mpeg">
+        </audio>
+        <script src="events.js"></script>
+        <script src="questions.js"></script>
+        <script src="checkans.js"></script>
     </div>
-    <div id = "footer">
-        <p id = "lives">Lives: </p>
-        <p id = "skips">Skip</p>
-    </div>
     
-      
-    
-        
-    
-    
-    <script src="events.js"></script>
 </body>
+
 </html>

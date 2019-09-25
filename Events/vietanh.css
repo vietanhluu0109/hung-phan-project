@@ -1,0 +1,13 @@
+body{
+    margin: 0px;
+    background-image: url(start.jpg);
+}
+#quiz{
+    width: 100%;
+    height: 650px;
+    
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+
+}

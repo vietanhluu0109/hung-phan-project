@@ -1,18 +1,50 @@
-var lives = 3;
+const startgame = document.getElementById("start");
+const quiz = document.getElementById("quiz");
+const footer = document.getElementById("footer");
 
-
-function loaded() {
-    // console.log("Body")
-    alert("let's playyy mind hung phan!!")
+function start() {
+    menu.style.display = "none";
+    quiz.style.display = "initial";
+    footer.style.display = "initial";
+    RunningQuestionIndex = 0;
+    earlygame()
+    LoopthroughQuestion();
 }
+
+var quest = document.getElementsByClassName("question")
+quest.textContent = ``
 
 function ANS(Answer) {
     console.log(Answer);
-    alert("Wronggggggg");
+    // alert("Wronggggggg");
+    // return true;    
 }
 
-var haha = document.getElementById("pglayout")
-var rightAns = haha.getElementsByClassName("Ansbox")
+function colorafter(ID) {
+    document.getElementById(ID).style.backgroundColor = "orange";
+}
 
-var livesEl = document.getElementById("lives")
-livesEl.textContent = `Lives: ${lives}`; 
+function colorbefore(ID) {
+    document.getElementById(ID).style.backgroundColor = "lightgray";
+}
+
+
+
+function skipquest() {
+    skips-=1;
+    skipEl.textContent = `SKIP: ${skips}`;
+    if (skips ===0) {
+        alert("No more skipping meit!!");
+        document.getElementById("skips").disabled = true;
+    }
+    if (RunningQuestionIndex === lastQuestionIndex) {
+        alert("No more skipping meit!!")
+    } else {
+    RunningQuestionIndex++;        
+    LoopthroughQuestion();
+    questionnumber++;
+    var number = document.getElementById("questionnumber");
+    number.textContent = `${questionnumber}.`;}
+}
+
+
